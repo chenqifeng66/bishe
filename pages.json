@@ -1,0 +1,61 @@
+{
+	"pages": [{
+		"path": "pages/login/login",
+		"style": {}
+	}, {
+		"path": "pages/register/register",
+		"style": {
+			"enablePullDownRefresh": false
+		}
+
+	}, {
+		"path": "pages/message/message",
+		"style": {
+			"navigationBarTitleText": "",
+			"enablePullDownRefresh": false
+		}
+
+	}, {
+		"path": "pages/contacts/contacts",
+		"style": {
+			"navigationBarTitleText": "",
+			"enablePullDownRefresh": false
+		}
+
+	}, {
+		"path": "pages/set/set",
+		"style": {
+			"navigationBarTitleText": "",
+			"enablePullDownRefresh": false
+		}
+
+	}],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "Ghost",
+		"navigationBarBackgroundColor": "#fff",
+		"backgroundColor": "#F8F8F8",
+		"app-plus": {
+			"background": "#efeff4"
+		}
+	},
+	"tabBar": {
+		"selectedColor": "#104135",
+		"list": [{
+			"pagePath": "pages/message/message",
+			"text": "消息",
+			"iconPath": "static/tab_icons/message.png",
+			"selectedIconPath": "static/tab_icons/message-active.png"
+		}, {
+			"pagePath": "pages/contacts/contacts",
+			"text": "联系人",
+			"iconPath": "static/tab_icons/contacts.png",
+			"selectedIconPath": "static/tab_icons/contacts-active.png"
+		}, {
+			"pagePath": "pages/set/set",
+			"text": "设置",
+			"iconPath": "static/tab_icons/set.png",
+			"selectedIconPath": "static/tab_icons/set-active.png"
+		}]
+	}
+}

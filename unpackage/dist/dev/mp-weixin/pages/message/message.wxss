@@ -1,0 +1,44 @@
+/* 水平间距 */
+/* 水平间距 */
+.top-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10rpx 30rpx;
+  box-sizing: border-box;
+}
+.top-bar .left image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.top-bar .right {
+  position: relative;
+}
+.top-bar .right image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.top-bar .right .popup {
+  position: absolute;
+  left: -355%;
+  top: 40%;
+  width: 200rpx;
+  height: 200rpx;
+  border: 1px solid #ccc;
+  text-align: center;
+  background-color: #fff;
+  z-index: 999;
+}
+uni-search-bar .uni-searchbar {
+  padding-top: 0;
+}
+.main .uni-list--border::after {
+  height: 0 !important;
+}
+.main .uni-list--border-top {
+  height: 0;
+}
+.main .uni-list--border-bottom {
+  height: 0;
+}

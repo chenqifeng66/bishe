@@ -1,0 +1,57 @@
+/* 水平间距 */
+/* 水平间距 */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 48rpx;
+  position: relative;
+}
+.container .header {
+  width: 100%;
+  margin-top: 150rpx;
+  margin-bottom: 48rpx;
+}
+.container .header text {
+  font-size: 64rpx;
+  line-height: 88rpx;
+  font-weight: 300;
+}
+.container .username,
+.container .password {
+  width: 100%;
+  position: relative;
+}
+.container .username input,
+.container .password input {
+  background-color: #f8f9fa;
+  border: none;
+  color: #212529;
+  padding: 32rpx;
+  font-size: 32rpx;
+  line-height: 82rpx;
+  border-radius: 32rpx;
+}
+.container .username .clearBtn,
+.container .password .clearBtn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+.container .password {
+  margin-top: 30rpx;
+}
+.container .nextBtn {
+  width: 654rpx;
+  background-color: #212529;
+  color: #fff;
+  font-size: 32rpx;
+  line-height: 48rpx;
+  padding: 32rpx 48rpx;
+  border-radius: 32rpx;
+  position: absolute;
+  bottom: 160rpx;
+}
