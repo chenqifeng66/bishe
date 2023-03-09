@@ -1,0 +1,1 @@
+<view class="item"><view class="left"><slot name="image"></slot><slot name="content"></slot></view><view class="right"><slot name="right_icon"></slot></view></view>

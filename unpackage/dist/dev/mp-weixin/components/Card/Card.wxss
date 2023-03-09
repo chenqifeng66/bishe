@@ -1,0 +1,35 @@
+/* 水平间距 */
+/* 水平间距 */
+.item {
+  display: flex;
+  height: 100rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  margin-top: 10rpx;
+  padding: 0 15rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+.item .left {
+  display: flex;
+  align-items: center;
+}
+.item .left image {
+  width: 75rpx;
+  height: 75rpx;
+  border-radius: 8rpx;
+  margin-right: 20rpx;
+}
+.item .left .name {
+  font-size: 30rpx;
+}
+.item .right {
+  height: 40rpx;
+  width: 40rpx;
+  box-sizing: border-box;
+}
+.item .right image {
+  height: 40rpx;
+  width: 40rpx;
+  margin-right: 5rpx;
+}

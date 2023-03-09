@@ -19,5 +19,14 @@ export default {
 			method: "POST",
 			data: data
 		})
+	},
+	
+	// 获取好友列表
+	getFriendList:(data)=>{
+		return request({
+			url:"/friend/list",
+			method:"GET",
+			data:data
+		})
 	}
 }

@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "",
   "enablePullDownRefresh": false,
-  "usingComponents": {}
+  "usingComponents": {
+    "card": "../../components/Card/Card"
+  }
 }

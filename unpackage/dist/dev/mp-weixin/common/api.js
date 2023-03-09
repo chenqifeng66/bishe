@@ -17,6 +17,14 @@ const api = {
       method: "POST",
       data
     });
+  },
+  // 获取好友列表
+  getFriendList: (data) => {
+    return request({
+      url: "/friend/list",
+      method: "GET",
+      data
+    });
   }
 };
 exports.api = api;

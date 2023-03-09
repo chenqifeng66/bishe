@@ -11,25 +11,25 @@
     "backgroundColor": "#F8F8F8"
   },
   "tabBar": {
-    "selectedColor": "#104135",
+    "selectedColor": "#d18c52",
     "list": [
       {
         "pagePath": "pages/message/message",
         "text": "消息",
         "iconPath": "static/tab_icons/message.png",
-        "selectedIconPath": "static/tab_icons/message-active.png"
+        "selectedIconPath": "static/tab_icons/message.png"
       },
       {
         "pagePath": "pages/contacts/contacts",
         "text": "联系人",
         "iconPath": "static/tab_icons/contacts.png",
-        "selectedIconPath": "static/tab_icons/contacts-active.png"
+        "selectedIconPath": "static/tab_icons/contacts.png"
       },
       {
         "pagePath": "pages/set/set",
         "text": "设置",
         "iconPath": "static/tab_icons/set.png",
-        "selectedIconPath": "static/tab_icons/set-active.png"
+        "selectedIconPath": "static/tab_icons/set.png"
       }
     ]
   },
