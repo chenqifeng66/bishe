@@ -1,6 +1,11 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
 const common_assets = require("../../common/assets.js");
+new Proxy({}, {
+  get(_, key) {
+    throw new Error(`Module "os" has been externalized for browser compatibility. Cannot access "os.${key}" in client code.`);
+  }
+});
 if (!Math) {
   common_vendor.unref(Card)();
 }
@@ -21,10 +26,24 @@ const _sfc_main = {
       name: "个人信息",
       imgUrl: common_assets.set_img
     }]);
+    const getUserInfo = () => {
+      common_vendor.index.getUserProfile({
+        desc: "weixin",
+        success({ userInfo }) {
+          common_vendor.index.setStorageSync("userInfo", userInfo);
+          localUserInfo.value = common_vendor.index.getStorageSync("userInfo");
+        }
+      });
+    };
+    const localUserInfo = common_vendor.ref({});
+    common_vendor.onMounted(() => {
+      localUserInfo.value = common_vendor.index.getStorageSync("userInfo") || {};
+    });
     return (_ctx, _cache) => {
       return {
-        a: common_assets._imports_0$1,
-        b: common_vendor.f(setOptions, (item, index, i0) => {
+        a: localUserInfo.value ? localUserInfo.value.avatarUrl : "@/static/my-icons/fox.png",
+        b: common_vendor.o(getUserInfo),
+        c: common_vendor.f(setOptions, (item, index, i0) => {
           return {
             a: item.imgUrl,
             b: common_vendor.t(item.name),

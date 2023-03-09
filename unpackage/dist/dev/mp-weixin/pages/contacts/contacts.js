@@ -23,7 +23,7 @@ const _sfc_main = {
           }, item.identity ? {
             d: common_vendor.unref(common_assets.rabbit)
           } : {
-            e: common_vendor.unref(common_assets._imports_0$1)
+            e: common_vendor.unref(common_assets.fox)
           }, {
             f: item.id,
             g: "90a1bbf6-0-" + i0

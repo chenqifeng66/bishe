@@ -6998,6 +6998,7 @@ exports.initVueI18n = initVueI18n;
 exports.isRef = isRef;
 exports.n = n;
 exports.o = o;
+exports.onMounted = onMounted;
 exports.p = p;
 exports.reactive = reactive;
 exports.ref = ref;
