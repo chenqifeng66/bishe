@@ -7,7 +7,7 @@ class Request {
     param.token || "";
     const requestUrl = common_operate.operate.api + url;
     common_vendor.index.showLoading({
-      title: "\u52A0\u8F7D\u4E2D..."
+      title: "加载中..."
     });
     return new Promise((resolve, reject) => {
       common_vendor.index.request({
@@ -33,6 +33,7 @@ class Request {
           }
           resolve(res.data);
         },
+        //请求失败
         fail: (e) => {
           common_vendor.index.showToast({
             title: "" + e.data.message,
@@ -40,6 +41,7 @@ class Request {
           });
           resolve(e.data);
         },
+        //请求完成
         complete() {
           common_vendor.index.hideLoading();
           resolve();

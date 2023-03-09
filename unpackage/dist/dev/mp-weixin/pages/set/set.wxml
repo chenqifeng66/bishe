@@ -1,1 +1,1 @@
-<view></view>
+<view class="container"><view class="avatar"><image src="/static/logo.png" mode="scaleToFill"></image></view><view class="options"><view class="item"><uni-icons wx:if="{{a}}" u-i="cb40606e-0" bind:__l="__l" u-p="{{a}}"></uni-icons><label>个人信息</label></view><view class="item"><uni-icons wx:if="{{b}}" u-i="cb40606e-1" bind:__l="__l" u-p="{{b}}"></uni-icons><label>设置</label></view><view class="item"><uni-icons wx:if="{{c}}" u-i="cb40606e-2" bind:__l="__l" u-p="{{c}}"></uni-icons><label>关于我们</label></view></view></view>

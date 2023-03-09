@@ -1,5 +1,7 @@
 "use strict";
 const operate = {
-  api: "http://127.0.0.1:3000"
+  //接口
+  // api: "http://127.0.0.1:3000",
+  api: "https://mock.apifox.cn/m1/2156849-0-default"
 };
 exports.operate = operate;

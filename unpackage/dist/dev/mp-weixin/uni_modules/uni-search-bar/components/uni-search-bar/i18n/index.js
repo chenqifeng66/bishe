@@ -5,11 +5,11 @@ const en = {
 };
 const zhHans = {
   "uni-search-bar.cancel": "cancel",
-  "uni-search-bar.placeholder": "\u8BF7\u8F93\u5165\u641C\u7D22\u5185\u5BB9"
+  "uni-search-bar.placeholder": "请输入搜索内容"
 };
 const zhHant = {
   "uni-search-bar.cancel": "cancel",
-  "uni-search-bar.placeholder": "\u8ACB\u8F38\u5165\u641C\u7D22\u5167\u5BB9"
+  "uni-search-bar.placeholder": "請輸入搜索內容"
 };
 const messages = {
   en,

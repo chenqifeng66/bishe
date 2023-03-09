@@ -28,12 +28,12 @@ const _sfc_main = {
         f: common_vendor.o(_ctx.input),
         g: common_vendor.p({
           cancelButton: "none",
-          placeholder: "\u641C\u7D22"
+          placeholder: "搜索"
         }),
         h: common_vendor.p({
           title: "uni-app",
           avatar: "https://web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png",
-          note: "\u60A8\u6536\u5230\u4E00\u6761\u65B0\u7684\u6D88\u606F",
+          note: "您收到一条新的消息",
           time: "2020-02-02 20:20",
           ["badge-positon"]: "right",
           ["badge-text"]: "99"
@@ -41,7 +41,7 @@ const _sfc_main = {
         i: common_vendor.p({
           title: "uni-app",
           avatar: "https://web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png",
-          note: "\u60A8\u6536\u5230\u4E00\u6761\u65B0\u7684\u6D88\u606F",
+          note: "您收到一条新的消息",
           time: "2020-02-02 20:20",
           ["badge-positon"]: "right",
           ["badge-text"]: "99"
@@ -49,7 +49,7 @@ const _sfc_main = {
         j: common_vendor.p({
           title: "uni-app",
           avatar: "https://web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png",
-          note: "\u60A8\u6536\u5230\u4E00\u6761\u65B0\u7684\u6D88\u606F",
+          note: "您收到一条新的消息",
           time: "2020-02-02 20:20",
           ["badge-positon"]: "right",
           ["badge-text"]: "99"
@@ -57,7 +57,7 @@ const _sfc_main = {
         k: common_vendor.p({
           title: "uni-app",
           avatar: "https://web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png",
-          note: "\u60A8\u6536\u5230\u4E00\u6761\u65B0\u7684\u6D88\u606F",
+          note: "您收到一条新的消息",
           time: "2020-02-02 20:20",
           ["badge-positon"]: "right",
           ["badge-text"]: "99"
@@ -65,7 +65,7 @@ const _sfc_main = {
         l: common_vendor.p({
           title: "uni-app",
           avatar: "https://web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png",
-          note: "\u60A8\u6536\u5230\u4E00\u6761\u65B0\u7684\u6D88\u606F",
+          note: "您收到一条新的消息",
           time: "2020-02-02 20:20",
           ["badge-positon"]: "right",
           ["badge-text"]: "99"
@@ -74,5 +74,5 @@ const _sfc_main = {
     };
   }
 };
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "F:/\u5927\u56DB\u4E0A\u5B66\u671F\u8BFE\u7A0B\u5185\u5BB9/\u6BD5\u8BBE/uni-app/yike/pages/message/message.vue"]]);
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "/Users/lindo02/work/bishe/bishe/pages/message/message.vue"]]);
 wx.createPage(MiniProgramPage);

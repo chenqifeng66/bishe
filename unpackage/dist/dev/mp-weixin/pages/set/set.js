@@ -5,8 +5,26 @@ const _sfc_main = {
     return {};
   }
 };
-function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
-  return {};
+if (!Array) {
+  const _easycom_uni_icons2 = common_vendor.resolveComponent("uni-icons");
+  _easycom_uni_icons2();
 }
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "F:/\u5927\u56DB\u4E0A\u5B66\u671F\u8BFE\u7A0B\u5185\u5BB9/\u6BD5\u8BBE/uni-app/yike/pages/set/set.vue"]]);
+const _easycom_uni_icons = () => "../../uni_modules/uni-icons/components/uni-icons/uni-icons.js";
+if (!Math) {
+  _easycom_uni_icons();
+}
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+  return {
+    a: common_vendor.p({
+      type: "person-filled"
+    }),
+    b: common_vendor.p({
+      type: "gear-filled"
+    }),
+    c: common_vendor.p({
+      type: "info"
+    })
+  };
+}
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/lindo02/work/bishe/bishe/pages/set/set.vue"]]);
 wx.createPage(MiniProgramPage);

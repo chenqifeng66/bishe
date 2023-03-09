@@ -1,14 +1,5 @@
 {
 	"pages": [{
-		"path": "pages/login/login",
-		"style": {}
-	}, {
-		"path": "pages/register/register",
-		"style": {
-			"enablePullDownRefresh": false
-		}
-
-	}, {
 		"path": "pages/message/message",
 		"style": {
 			"navigationBarTitleText": "",

@@ -104,5 +104,8 @@
 		.uni-list--border-bottom {
 			height: 0;
 		}
+		.uni-list-chat__header-image{
+			margin:0px;
+		}
 	}
 </style>

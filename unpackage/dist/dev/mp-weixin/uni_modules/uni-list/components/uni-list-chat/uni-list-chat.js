@@ -52,6 +52,7 @@ const _sfc_main = {
       }
     }
   },
+  // inject: ['list'],
   computed: {
     isSingle() {
       if (this.badgeText === "dot") {
@@ -82,6 +83,7 @@ const _sfc_main = {
     return {
       isFirstChild: false,
       border: true,
+      // avatarList: 3,
       imageWidth: 50
     };
   },
@@ -96,6 +98,9 @@ const _sfc_main = {
     }
   },
   methods: {
+    /**
+     * 获取父元素实例
+     */
     getForm(name = "uniList") {
       let parent = this.$parent;
       let parentName = parent.$options.name;
@@ -183,5 +188,5 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     y: common_vendor.o((...args) => $options.onClick && $options.onClick(...args))
   });
 }
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "F:/\u5927\u56DB\u4E0A\u5B66\u671F\u8BFE\u7A0B\u5185\u5BB9/\u6BD5\u8BBE/uni-app/yike/uni_modules/uni-list/components/uni-list-chat/uni-list-chat.vue"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/lindo02/work/bishe/bishe/uni_modules/uni-list/components/uni-list-chat/uni-list-chat.vue"]]);
 wx.createComponent(Component);
