@@ -8,5 +8,5 @@ const _sfc_main = {
     };
   }
 };
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "/Users/lindo02/work/bishe/bishe/components/Card/Card.vue"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "/Users/lindo001/work/bishe/components/Card/Card.vue"]]);
 wx.createComponent(Component);

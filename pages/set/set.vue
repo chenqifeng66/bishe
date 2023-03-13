@@ -1,7 +1,8 @@
 <template>
 	<view class="container">
 		<view class="avatar">
-			<image :src="localUserInfo ? localUserInfo.avatarUrl : '@/static/my-icons/fox.png'" mode="scaleToFill" @click="getUserInfo"></image>
+			<image :src="state.userInfo.avatarUrl || fox" mode="scaleToFill"
+				@click="getUserInfo"></image>
 		</view>
 
 		<view class="options">
@@ -22,11 +23,20 @@
 		Card
 	} from "@/components/Card/Card.vue"
 	import set_img from "@/static/my-icons/set.png"
-import { userInfo } from "os";
+	import fox from "@/static/my-icons/fox.png"
+	import rabbit from "@/static/my-icons/rabbit.png"
+	import {
+		userInfo
+	} from "os";
 	import {
 		onMounted,
-		reactive,ref
+		reactive,
+		ref
 	} from "vue";
+	
+	const state = reactive({
+		userInfo: {}
+	})
 
 	const setOptions = reactive([{
 		name: "个人信息",
@@ -41,22 +51,22 @@ import { userInfo } from "os";
 		name: "个人信息",
 		imgUrl: set_img
 	}])
-	
+
 	const getUserInfo = () => {
 		uni.getUserProfile({
-			desc:"weixin",
-			success({userInfo}) {
-				uni.setStorageSync('userInfo',userInfo)
-				localUserInfo.value = uni.getStorageSync('userInfo');
-				
+			desc: "weixin",
+			success({
+				userInfo
+			}) {
+				uni.setStorageSync('userInfo', userInfo)
+				state.userInfo = uni.getStorageSync('userInfo');
 			}
 		})
 	}
-	
-	const localUserInfo = ref({})
-	
-	onMounted(()=>{
-		localUserInfo.value = uni.getStorageSync("userInfo") || {}
+
+
+	onMounted(() => {
+		state.userInfo = uni.getStorageSync("userInfo") || {}
 	})
 </script>
 

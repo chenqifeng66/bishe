@@ -74,5 +74,5 @@ const _sfc_main = {
     };
   }
 };
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "/Users/lindo02/work/bishe/bishe/pages/message/message.vue"]]);
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "/Users/lindo001/work/bishe/pages/message/message.vue"]]);
 wx.createPage(MiniProgramPage);
