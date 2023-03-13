@@ -25,12 +25,8 @@
 	import fox from "@/static/my-icons/fox.png"
 	import rabbit from "@/static/my-icons/rabbit.png"
 	import {
-		userInfo
-	} from "os";
-	import {
 		onMounted,
 		reactive,
-		ref
 	} from "vue";
 
 	const state = reactive({
