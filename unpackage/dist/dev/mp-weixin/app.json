@@ -2,7 +2,8 @@
   "pages": [
     "pages/message/message",
     "pages/contacts/contacts",
-    "pages/set/set"
+    "pages/set/set",
+    "pages/chat/Chat"
   ],
   "window": {
     "navigationBarTextStyle": "black",

@@ -8,6 +8,7 @@ if (!Math) {
   "./pages/message/message.js";
   "./pages/contacts/contacts.js";
   "./pages/set/set.js";
+  "./pages/chat/Chat.js";
 }
 const _sfc_main = {
   onLaunch: function() {
