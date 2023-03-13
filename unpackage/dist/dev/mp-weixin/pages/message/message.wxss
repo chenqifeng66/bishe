@@ -1,6 +1,6 @@
 /* 水平间距 */
 /* 水平间距 */
-.top-bar.data-v-4c1b26cf {
+.top-bar {
   background-color: #fff;
   width: 100%;
   display: flex;
@@ -9,19 +9,19 @@
   padding: 10rpx 30rpx;
   box-sizing: border-box;
 }
-.top-bar .avatar image.data-v-4c1b26cf {
+.top-bar .avatar image {
   width: 50rpx;
   height: 50rpx;
 }
-.top-bar .uni-searchbar.data-v-4c1b26cf {
+.top-bar .uni-searchbar {
   width: 620rpx;
 }
-.main .uni-list--border.data-v-4c1b26cf::after {
+.main .uni-list--border::after {
   height: 0 !important;
 }
-.main .uni-list--border-top.data-v-4c1b26cf, .main .uni-list--border-bottom.data-v-4c1b26cf {
+.main .uni-list--border-top, .main .uni-list--border-bottom {
   height: 0;
 }
-.main .uni-list-chat__header-image.data-v-4c1b26cf {
+.main .uni-list-chat__header-image {
   margin: 0px;
 }

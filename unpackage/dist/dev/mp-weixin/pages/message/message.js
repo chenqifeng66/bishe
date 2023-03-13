@@ -34,7 +34,7 @@ const _sfc_main = {
         }),
         e: common_vendor.f(state.recentContactsList, (item, k0, i0) => {
           return {
-            a: "4c1b26cf-2-" + i0 + ",4c1b26cf-1",
+            a: "2471777c-2-" + i0 + ",2471777c-1",
             b: common_vendor.p({
               title: item.name,
               avatar: item.avatar,
@@ -49,5 +49,5 @@ const _sfc_main = {
     };
   }
 };
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-4c1b26cf"], ["__file", "/Users/lindo001/work/bishe/pages/message/message.vue"]]);
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "/Users/lindo001/work/bishe/pages/message/message.vue"]]);
 wx.createPage(MiniProgramPage);

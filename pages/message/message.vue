@@ -39,7 +39,7 @@
 	
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 	.top-bar {
 		background-color: #fff;
 		width: 100%;
