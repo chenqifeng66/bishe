@@ -43,3 +43,30 @@
   height: 50rpx;
   width: 50rpx;
 }
+.container .main.data-v-17e92379 {
+  height: 100%;
+  margin-bottom: 100rpx;
+  padding: 0 20rpx;
+}
+.container .main .message.data-v-17e92379 {
+  display: flex;
+  align-items: flex-start;
+  padding: 15rpx 0;
+}
+.container .main .message image.data-v-17e92379 {
+  height: 50rpx;
+  width: 50rpx;
+}
+.container .main .message .content.data-v-17e92379 {
+  background-color: #fff;
+  margin-left: 10rpx;
+  padding: 10rpx;
+  border-radius: 8rpx;
+  max-width: 70%;
+}
+.container .main .right.data-v-17e92379 {
+  flex-direction: row-reverse;
+}
+.container .main .right .content.data-v-17e92379 {
+  margin-right: 10rpx;
+}
