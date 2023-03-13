@@ -1,32 +1,18 @@
 <template>
 	<!-- 顶部导航 -->
 	<view class="top-bar">
-		<view class="left">
+		<view class="avatar">
 			<image src="@/static/my-icons/fox.png" mode="scaleToFill"></image>
 		</view>
-		<uni-search-bar @confirm="search" @input="input" cancelButton="none" placeholder="搜索"></uni-search-bar>
+		<uni-search-bar class="search" @confirm="search" @input="input" cancelButton="none" placeholder="搜索"></uni-search-bar>
 	</view>
 
-	<!-- 搜索框区域 -->
-	<uni-search-bar @confirm="search" @input="input" cancelButton="none" placeholder="搜索"></uni-search-bar>
 
 	<!-- 消息列表区域 -->
 	<view class="main">
 		<uni-list>
-			<uni-list-chat title="uni-app" avatar="https://web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png"
-				note="您收到一条新的消息" time="2020-02-02 20:20" badge-positon="right" badge-text="99">
-			</uni-list-chat>
-			<uni-list-chat title="uni-app" avatar="https://web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png"
-				note="您收到一条新的消息" time="2020-02-02 20:20" badge-positon="right" badge-text="99">
-			</uni-list-chat>
-			<uni-list-chat title="uni-app" avatar="https://web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png"
-				note="您收到一条新的消息" time="2020-02-02 20:20" badge-positon="right" badge-text="99">
-			</uni-list-chat>
-			<uni-list-chat title="uni-app" avatar="https://web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png"
-				note="您收到一条新的消息" time="2020-02-02 20:20" badge-positon="right" badge-text="99">
-			</uni-list-chat>
-			<uni-list-chat title="uni-app" avatar="https://web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png"
-				note="您收到一条新的消息" time="2020-02-02 20:20" badge-positon="right" badge-text="99">
+			<uni-list-chat style="" v-for="item in state.recentContactsList" :title="item.name" :avatar="item.avatar"
+				:note="item.end_message" :time="item.end_time" badge-positon="right" :badge-text="item.unread_message">
 			</uni-list-chat>
 		</uni-list>
 	</view>
@@ -34,67 +20,55 @@
 
 <script setup>
 	import {
-		ref
+		reactive,
+		ref,
+		getCurrentInstance,
+		onMounted
 	} from 'vue'
+	
+	const {proxy} = getCurrentInstance()
 
-	let showPopup = ref(false)
+	const state = reactive({
+		recentContactsList: []
+	})
+	
+	// 获取最近联系人列表
+	proxy.$api.getRecentContactsList({id:'213123213'}).then(res=>{
+		state.recentContactsList = res.data.recent_contacts
+	})
+	
 </script>
 
 <style lang="scss">
 	.top-bar {
+		background-color: #fff;
 		width: 100%;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: flex-start;
 		padding: 10rpx 30rpx;
 		box-sizing: border-box;
 
-		.left {
+		.avatar {
 
 			image {
 				width: 50rpx;
 				height: 50rpx;
 			}
 		}
-
-		.right {
-			position: relative;
-
-			image {
-				width: 50rpx;
-				height: 50rpx;
-			}
-
-			.popup {
-				position: absolute;
-				left: -355%;
-				top: 40%;
-				width: 200rpx;
-				height: 200rpx;
-				border: 1px solid #ccc;
-				text-align: center;
-				background-color: #fff;
-				z-index: 999;
-			}
+		
+		.uni-searchbar{
+			width: 620rpx;
 		}
 	}
 
-	uni-search-bar {
-		.uni-searchbar {
-			padding-top: 0;
-		}
-	}
 
 	.main {
 		.uni-list--border::after {
 			height: 0 !important;
 		}
 
-		.uni-list--border-top {
-			height: 0;
-		}
-
-		.uni-list--border-bottom {
+		.uni-list--border-top,.uni-list--border-bottom {
 			height: 0;
 		}
 		.uni-list-chat__header-image{

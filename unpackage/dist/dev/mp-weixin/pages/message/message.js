@@ -16,7 +16,13 @@ if (!Math) {
 const _sfc_main = {
   __name: "message",
   setup(__props) {
-    common_vendor.ref(false);
+    const { proxy } = common_vendor.getCurrentInstance();
+    const state = common_vendor.reactive({
+      recentContactsList: []
+    });
+    proxy.$api.getRecentContactsList({ id: "213123213" }).then((res) => {
+      state.recentContactsList = res.data.recent_contacts;
+    });
     return (_ctx, _cache) => {
       return {
         a: common_assets.fox,
@@ -26,51 +32,18 @@ const _sfc_main = {
           cancelButton: "none",
           placeholder: "搜索"
         }),
-        e: common_vendor.o(_ctx.search),
-        f: common_vendor.o(_ctx.input),
-        g: common_vendor.p({
-          cancelButton: "none",
-          placeholder: "搜索"
-        }),
-        h: common_vendor.p({
-          title: "uni-app",
-          avatar: "https://web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png",
-          note: "您收到一条新的消息",
-          time: "2020-02-02 20:20",
-          ["badge-positon"]: "right",
-          ["badge-text"]: "99"
-        }),
-        i: common_vendor.p({
-          title: "uni-app",
-          avatar: "https://web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png",
-          note: "您收到一条新的消息",
-          time: "2020-02-02 20:20",
-          ["badge-positon"]: "right",
-          ["badge-text"]: "99"
-        }),
-        j: common_vendor.p({
-          title: "uni-app",
-          avatar: "https://web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png",
-          note: "您收到一条新的消息",
-          time: "2020-02-02 20:20",
-          ["badge-positon"]: "right",
-          ["badge-text"]: "99"
-        }),
-        k: common_vendor.p({
-          title: "uni-app",
-          avatar: "https://web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png",
-          note: "您收到一条新的消息",
-          time: "2020-02-02 20:20",
-          ["badge-positon"]: "right",
-          ["badge-text"]: "99"
-        }),
-        l: common_vendor.p({
-          title: "uni-app",
-          avatar: "https://web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png",
-          note: "您收到一条新的消息",
-          time: "2020-02-02 20:20",
-          ["badge-positon"]: "right",
-          ["badge-text"]: "99"
+        e: common_vendor.f(state.recentContactsList, (item, k0, i0) => {
+          return {
+            a: "2471777c-2-" + i0 + ",2471777c-1",
+            b: common_vendor.p({
+              title: item.name,
+              avatar: item.avatar,
+              note: item.end_message,
+              time: item.end_time,
+              ["badge-positon"]: "right",
+              ["badge-text"]: item.unread_message
+            })
+          };
         })
       };
     };

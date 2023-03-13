@@ -25,6 +25,14 @@ const api = {
       method: "GET",
       data
     });
+  },
+  // 获取最近联系人列表
+  getRecentContactsList: (data) => {
+    return request({
+      url: "/recent_contacts",
+      method: "GET",
+      data
+    });
   }
 };
 exports.api = api;

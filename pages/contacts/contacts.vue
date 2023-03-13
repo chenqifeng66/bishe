@@ -6,7 +6,7 @@
 					<image :src="item.imgUrl" mode="scaleToFill"></image>
 				</template>
 				<template #content>
-					<text class="name">{{item.name}}</text>
+					<text class="name">{{ item.name }}</text>
 				</template>
 				<template #right_icon>
 					<image v-if='item.identity' :src="rabbit" mode="scaleToFill"></image>
