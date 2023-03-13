@@ -1,12 +1,11 @@
 <template>
 	<view class="container">
 		<view class="avatar">
-			<image :src="state.userInfo.avatarUrl || fox" mode="scaleToFill"
-				@click="getUserInfo"></image>
+			<image :src="state.userInfo.avatarUrl || fox" mode="scaleToFill" @click="getUserInfo"></image>
 		</view>
 
 		<view class="options">
-			<Card v-for="(item,index) in setOptions" :key="index">
+			<Card v-for="(item,index) in state.setOptions" :key="index">
 				<template #image>
 					<image class="icon" :src="item.imgUrl" mode="scaleToFill"></image>
 				</template>
@@ -33,24 +32,23 @@
 		reactive,
 		ref
 	} from "vue";
-	
+
 	const state = reactive({
+		setOptions: [{
+			name: "个人信息",
+			imgUrl: set_img
+		}, {
+			name: "个人信息",
+			imgUrl: set_img
+		}, {
+			name: "个人信息",
+			imgUrl: set_img
+		}, {
+			name: "个人信息",
+			imgUrl: set_img
+		}]
 		userInfo: {}
 	})
-
-	const setOptions = reactive([{
-		name: "个人信息",
-		imgUrl: set_img
-	}, {
-		name: "个人信息",
-		imgUrl: set_img
-	}, {
-		name: "个人信息",
-		imgUrl: set_img
-	}, {
-		name: "个人信息",
-		imgUrl: set_img
-	}])
 
 	const getUserInfo = () => {
 		uni.getUserProfile({
