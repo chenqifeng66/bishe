@@ -2,16 +2,9 @@
 	<!-- 顶部导航 -->
 	<view class="top-bar">
 		<view class="left">
-			<image src="@/static/my-icons/logo.png" mode="scaleToFill"></image>
+			<image src="@/static/my-icons/fox.png" mode="scaleToFill"></image>
 		</view>
-		<view class="right">
-			<image src="@/static/my-icons/add.png" mode="scaleToFill" @click="showPopup = !showPopup"></image>
-			<view class="popup" v-if="showPopup">
-				<view class="add-friend">
-					<span>添加好友</span>
-				</view>
-			</view>
-		</view>
+		<uni-search-bar @confirm="search" @input="input" cancelButton="none" placeholder="搜索"></uni-search-bar>
 	</view>
 
 	<!-- 搜索框区域 -->

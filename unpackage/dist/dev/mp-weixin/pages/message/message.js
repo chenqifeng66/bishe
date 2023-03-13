@@ -16,14 +16,16 @@ if (!Math) {
 const _sfc_main = {
   __name: "message",
   setup(__props) {
-    let showPopup = common_vendor.ref(false);
+    common_vendor.ref(false);
     return (_ctx, _cache) => {
-      return common_vendor.e({
-        a: common_assets._imports_0,
-        b: common_assets._imports_1,
-        c: common_vendor.o(($event) => common_vendor.isRef(showPopup) ? showPopup.value = !common_vendor.unref(showPopup) : showPopup = !common_vendor.unref(showPopup)),
-        d: common_vendor.unref(showPopup)
-      }, common_vendor.unref(showPopup) ? {} : {}, {
+      return {
+        a: common_assets.fox,
+        b: common_vendor.o(_ctx.search),
+        c: common_vendor.o(_ctx.input),
+        d: common_vendor.p({
+          cancelButton: "none",
+          placeholder: "搜索"
+        }),
         e: common_vendor.o(_ctx.search),
         f: common_vendor.o(_ctx.input),
         g: common_vendor.p({
@@ -70,7 +72,7 @@ const _sfc_main = {
           ["badge-positon"]: "right",
           ["badge-text"]: "99"
         })
-      });
+      };
     };
   }
 };

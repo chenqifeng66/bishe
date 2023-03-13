@@ -6995,7 +6995,6 @@ exports.f = f;
 exports.getCurrentInstance = getCurrentInstance;
 exports.index = index;
 exports.initVueI18n = initVueI18n;
-exports.isRef = isRef;
 exports.n = n;
 exports.o = o;
 exports.onMounted = onMounted;

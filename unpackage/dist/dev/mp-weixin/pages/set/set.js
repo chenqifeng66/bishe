@@ -14,21 +14,21 @@ const _sfc_main = {
   __name: "set",
   setup(__props) {
     const state = common_vendor.reactive({
+      setOptions: [{
+        name: "个人信息",
+        imgUrl: common_assets.set_img
+      }, {
+        name: "个人信息",
+        imgUrl: common_assets.set_img
+      }, {
+        name: "个人信息",
+        imgUrl: common_assets.set_img
+      }, {
+        name: "个人信息",
+        imgUrl: common_assets.set_img
+      }],
       userInfo: {}
     });
-    const setOptions = common_vendor.reactive([{
-      name: "个人信息",
-      imgUrl: common_assets.set_img
-    }, {
-      name: "个人信息",
-      imgUrl: common_assets.set_img
-    }, {
-      name: "个人信息",
-      imgUrl: common_assets.set_img
-    }, {
-      name: "个人信息",
-      imgUrl: common_assets.set_img
-    }]);
     const getUserInfo = () => {
       common_vendor.index.getUserProfile({
         desc: "weixin",
@@ -47,7 +47,7 @@ const _sfc_main = {
       return {
         a: state.userInfo.avatarUrl || common_vendor.unref(common_assets.fox),
         b: common_vendor.o(getUserInfo),
-        c: common_vendor.f(setOptions, (item, index, i0) => {
+        c: common_vendor.f(state.setOptions, (item, index, i0) => {
           return {
             a: item.imgUrl,
             b: common_vendor.t(item.name),
