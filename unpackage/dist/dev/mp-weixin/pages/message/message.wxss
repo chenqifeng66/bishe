@@ -19,7 +19,8 @@
 .main .uni-list--border::after {
   height: 0 !important;
 }
-.main .uni-list--border-top, .main .uni-list--border-bottom {
+.main .uni-list--border-top,
+.main .uni-list--border-bottom {
   height: 0;
 }
 .main .uni-list-chat__header-image {

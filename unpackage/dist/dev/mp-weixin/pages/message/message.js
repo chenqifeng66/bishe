@@ -16,13 +16,22 @@ if (!Math) {
 const _sfc_main = {
   __name: "message",
   setup(__props) {
-    const { proxy } = common_vendor.getCurrentInstance();
+    const {
+      proxy
+    } = common_vendor.getCurrentInstance();
     const state = common_vendor.reactive({
       recentContactsList: []
     });
-    proxy.$api.getRecentContactsList({ id: "213123213" }).then((res) => {
+    proxy.$api.getRecentContactsList({
+      id: "213123213"
+    }).then((res) => {
       state.recentContactsList = res.data.recent_contacts;
     });
+    const toChat = () => {
+      common_vendor.index.navigateTo({
+        url: "/pages/chat/Chat"
+      });
+    };
     return (_ctx, _cache) => {
       return {
         a: common_assets.fox,
@@ -36,6 +45,7 @@ const _sfc_main = {
           return {
             a: "2471777c-2-" + i0 + ",2471777c-1",
             b: common_vendor.p({
+              clickable: true,
               title: item.name,
               avatar: item.avatar,
               note: item.end_message,
@@ -44,7 +54,8 @@ const _sfc_main = {
               ["badge-text"]: item.unread_message
             })
           };
-        })
+        }),
+        f: common_vendor.o(toChat)
       };
     };
   }
