@@ -42,7 +42,7 @@
 		}, {
 			name: "个人信息",
 			imgUrl: set_img
-		}]
+		}],
 		userInfo: {}
 	})
 
