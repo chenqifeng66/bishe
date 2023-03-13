@@ -2353,12 +2353,7 @@
   border-color: #e9e9eb;
 }
 page {
-  margin: 0;
-  padding: 0;
-  background-color: #F5F5F5;
-}
-ul {
-  list-style: none;
+  background-color: #fff;
 }
 .example-info {
   font-size: 14px;
